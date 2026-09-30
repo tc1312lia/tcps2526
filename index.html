@@ -11,7 +11,6 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
         }
 
         iframe {
@@ -19,13 +18,49 @@
             height: 100vh;
             border: none;
         }
+
+        .mobile-link {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .mobile-link a {
+            display: inline-block;
+            padding: 14px 20px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 768px) {
+            iframe {
+                display: none;
+            }
+
+            .mobile-link {
+                display: block;
+            }
+        }
     </style>
 </head>
 
 <body>
+
     <iframe
-        src="TCPS_AR.pdf"
+        src="./TCPS_AR.pdf"
         title="TCPS Annual Report FY25/26">
     </iframe>
+
+    <div class="mobile-link">
+        <p>View the full TCPS Annual Report:</p>
+
+        <a href="./TCPS_Annual_Report_FY2526_FinalSIGNED.pdf">
+            Open Annual Report
+        </a>
+    </div>
+
 </body>
 </html>
